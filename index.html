@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="Content">
+    <div id="MainDiv">
+        <h2>BMI Calculator 📉</h2>
+        <div>
+            <label id="weight">Weight</label>
+         <input type="tel" id="weightinputbox" maxlength="3" oninput="validateNumberInput(event)" placeholder="Enter your weight in kg">
+        </div>
+        
+        <br>
+        <label id="height">Height</label>
+        <input type="tel" id="heightinputbox" maxlength="3" oninput="validateNumberInput(event)" placeholder="Enter your height in cm">
+
+         <br>
+        <button id="Calculate" onclick="calculateBMI()">Calculate</button>
+        <button id="Clear" onclick="clearBMI()">Clear</button>
+    </div>
+
+  <div id="subMain">
+    <p id="BMIValue"></p>
+    <p id="BMIResult"></p>
+
+    <p id="weightRange">Weight should be 20kg to 300kg</p>
+    <p id="heightRange">Height should be 120cm to 250cm</p>
+  </div>  
+
+    <div>
+    
+     </div>
+  </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

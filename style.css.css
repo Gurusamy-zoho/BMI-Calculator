@@ -1,0 +1,48 @@
+#weightRange,#heightRange{
+    display: none;
+    position: relative;
+    left: 40px;
+}
+
+.weightRangeClass{
+    display: block;
+    
+}
+
+body{
+    background-color: #4a98f7;
+}
+
+#Content{
+   background-color: white;
+    position: relative;
+    margin-top: 200px;
+    height:300px;
+    width:300px;
+    left: 500px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+#MainDiv{
+   
+}
+
+#Calculate{
+    margin: 40px;
+    color: white;
+    padding: 4px;
+    border-radius: 4px;
+    background-color: #04AA6D;
+    font-weight: 24px;
+    width: 80px;
+}
+
+#Clear{
+    color: white;
+    padding: 4px;
+    border-radius: 4px;
+    background-color:red;
+    font-weight: 24px;
+    width: 70px;
+}
