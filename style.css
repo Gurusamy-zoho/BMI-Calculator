@@ -1,48 +1,103 @@
-#weightRange,#heightRange{
-    display: none;
-    position: relative;
-    left: 40px;
-}
 
-.weightRangeClass{
-    display: block;
-    
-}
 
 body{
-    background-color: #4a98f7;
-}
-
-#Content{
-   background-color: white;
-    position: relative;
-    margin-top: 200px;
-    height:300px;
-    width:300px;
-    left: 500px;
-    padding: 20px;
-    border-radius: 20px;
+    background-color:whitesmoke;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #MainDiv{
-   
+    background-color: white;
+    width: 400px;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 10px;
 }
 
 #Calculate{
-    margin: 40px;
+    background-color:  #007BFF;
     color: white;
-    padding: 4px;
-    border-radius: 4px;
-    background-color: #04AA6D;
-    font-weight: 24px;
-    width: 80px;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
 }
 
 #Clear{
+
+    background-color:  #f70f26; 
     color: white;
-    padding: 4px;
-    border-radius: 4px;
-    background-color:red;
-    font-weight: 24px;
-    width: 70px;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+input{
+    width: 90%;
+    height: 30px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    padding-left:15px ;
+    font-size: 14px;
+    margin-top:10px;
+    
+    outline: none;
+}
+
+label{
+    color: rgb(104, 103, 103);
+    font-size: 16px;
+
+}
+
+label > span{
+    color: red;
+    margin-left: 1px;
+}
+
+.yellow{
+    background-color: yellow;
+  
+}
+
+.green{
+    background-color: green;
+}
+
+.orange{
+    background-color: orange;
+}
+
+.red{
+    background-color: orangered;
+}
+
+.color-box{
+   width: 400px;
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   font-size: 10px;
+   text-align: center;
+   position: relative;
+   
+}
+
+
+#bmiIndicator {
+    position: absolute;
+    top: -3px;
+    width: 4px;
+    height: 20px;
+    background-color: black;
+    transition: left 5s ease;
 }
