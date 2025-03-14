@@ -18,8 +18,19 @@ function calculateBMI() {
 function moveIndicator(bmi) {
    const indicator = document.getElementById('bmiIndicator');
 
-   let position = ((bmi - 10) / (40 - 10)) * 100;
-   position = Math.min(100, Math.max(0, position)); 
+   let position;
+   if (bmi < 18) {
+       position = (bmi / 18) * 25;
+   } else if (bmi < 26) {
+       position = 25 + ((bmi - 18) / (26 - 18)) * 25;
+   } else if (bmi < 36) {
+       position = 50 + ((bmi - 26) / (36 - 26)) * 25;
+   } else {
+       position = 75 + ((bmi - 36) / (40 - 36)) * 25;
+   }
+   
+   position = Math.min(100, Math.max(0, position));
+   
 
    indicator.style.transition = 'none';
    indicator.style.left = `${indicator.style.left || '0%'}`;
@@ -31,12 +42,12 @@ function moveIndicator(bmi) {
 
    if (bmi < 18) {
        document.getElementById('BMIResult').textContent = 'Underweight 🥦';
-   } else if (bmi < 25) {
+   } else if (bmi < 26) {
        document.getElementById('BMIResult').textContent = 'Normal ✅';
-   } else if (bmi < 35) {
+   } else if (bmi < 36) {
        document.getElementById('BMIResult').textContent = 'Overweight 🍔';
    } else {
-       document.getElementById('BMIResult').textContent = 'Obese 🚨 ';
+       document.getElementById('BMIResult').textContent = 'Obese 🚨';
    }
 }
 
