@@ -56,6 +56,42 @@ function moveIndicator(bmi) {
 
    if (bmi < 18) {
        document.getElementById('BMIResult').textContent = 'Underweight 🥦';
+
+setTimeout(() => {
+    Swal.fire({
+        title: `Basic Recommendations`,
+        html: `
+            <style>
+                ol { padding-left: 20px; text-align: left; }
+                ol li { display: flex; align-items: flex-start; gap: 5px; margin-bottom: 14px; }
+                ol li b { width: 100px; flex-shrink: 0; }
+            </style>
+            <ol> 
+                <li><b>Balanced Diet:</b> Eat proteins (eggs, fish, poultry), healthy fats (nuts, avocado), and complex carbs (whole grains).</li>
+                <li><b>Frequent Meals:</b> Have small, nutrient-rich meals every 3-4 hours to maintain energy.</li>
+                <li><b>Exercise:</b> Focus on strength training to build muscle, avoid excessive cardio.</li>
+                <li><b>Hydration:</b> Drink high-calorie smoothies and stay hydrated.</li>
+            </ol>
+
+            <p style="color:red; font-weight:bold; text-align: center;">⚠ Best to consult your doctor for personalized advice.</p>
+        `,
+        icon: 'warning',
+        confirmButtonText: 'Got it',
+        position: 'center',
+        width: '450px',
+        heightAuto: false,
+        showClass: {
+            popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+            popup: 'animate__animated animate__fadeOutUp'
+        }
+    });
+}, 2000);
+
+
+
+
    } else if (bmi < 26) {
        document.getElementById('BMIResult').textContent = 'Normal ✅';
    } else if (bmi < 36) {
