@@ -163,6 +163,37 @@ setTimeout(() => {
 
    } else {
        document.getElementById('BMIResult').textContent = 'Obese 🚨';
+       setTimeout(() => {
+    Swal.fire({
+        title: `Overweight Management`,
+        html: `
+            <style>
+                ol { padding-left: 20px; text-align: left; }
+                ol li { display: flex; align-items: flex-start; gap: 5px; margin-bottom: 10px; }
+                ol li b { width: 140px; flex-shrink: 0; }
+            </style>
+            <ol> 
+                <li><b>Healthy Diet:</b> Reduce processed foods, sugars, and excess carbs. Eat fiber-rich and protein-packed meals.Avoid overeating</li>
+                <li><b>Regular Exercise:</b> Combine strength training and cardio (walking, cycling) for effective weight loss.</li>
+                <li><b>Sleep & Stress:</b> Get 7-8 hours of sleep and manage stress, as they impact weight gain.</li>
+            </ol>
+
+            <p style="color:red; font-weight:bold; text-align: center;">⚠ Consult your doctor for a personalized weight-loss plan.</p>
+        `,
+        icon: 'error',
+        confirmButtonText: 'Got it',
+        position: 'center',
+        width: '450px',
+        heightAuto: false,
+        showClass: {
+            popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+            popup: 'animate__animated animate__fadeOutUp'
+        }
+    });
+}, 4000);
+
    }
 }
 
