@@ -94,6 +94,39 @@ setTimeout(() => {
 
    } else if (bmi < 26) {
        document.getElementById('BMIResult').textContent = 'Normal ✅';
+
+       setTimeout(() => {
+    Swal.fire({
+        title: `Healthy Lifestyle Tips`,
+        html: `
+            <style>
+                ol { padding-left: 20px; text-align: left; }
+                ol li { display: flex; align-items: flex-start; gap: 5px; margin-bottom: 10px; }
+                ol li b { width: 120px; flex-shrink: 0; }
+            </style>
+            <ol> 
+                <li><b>Balanced Diet:</b> Maintain a healthy mix of proteins, healthy fats, and whole grains.</li>
+                <li><b>Exercise:</b> Combine strength training and moderate cardio for overall fitness.</li>
+                <li><b>Hydration:</b> Drink enough water daily to stay hydrated and support digestion.</li>
+                <li><b>Rest & Sleep:</b> Ensure 7-9 hours of quality sleep for overall well-being.</li>
+            </ol>
+
+            <p style="color:green; font-weight:bold; text-align: center;">✅ Keep up your healthy habits for long-term well-being!</p>
+        `,
+        icon: 'success',
+        confirmButtonText: 'Got it',
+        position: 'center',
+        width: '450px',
+        heightAuto: false,
+        showClass: {
+            popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+            popup: 'animate__animated animate__fadeOutUp'
+        }
+    });
+}, 2000);
+
    } else if (bmi < 36) {
        document.getElementById('BMIResult').textContent = 'Overweight 🍔';
    } else {
