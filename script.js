@@ -129,6 +129,38 @@ setTimeout(() => {
 
    } else if (bmi < 36) {
        document.getElementById('BMIResult').textContent = 'Overweight 🍔';
+       setTimeout(() => {
+    Swal.fire({
+        title: `Weight Management Tips`,
+        html: `
+            <style>
+                ol { padding-left: 20px; text-align: left; }
+                ol li { display: flex; align-items: flex-start; gap: 5px; margin-bottom: 10px; }
+                ol li b { width: 130px; flex-shrink: 0; }
+            </style>
+            <ol> 
+                <li><b>Balanced Diet:</b> Reduce processed foods and excess sugar, focus on whole foods.</li>
+                <li><b>Portion Control:</b> Eat smaller portions and avoid overeating to regulate calorie intake.</li>
+                <li><b>Regular Exercise:</b> Engage in a mix of cardio and strength training for fat loss.</li>
+                <li><b>Sleep & Stress:</b> Manage stress and ensure proper sleep to support weight control.</li>
+            </ol>
+
+            <p style="color:red; font-weight:bold; text-align: center;">⚠ Consult a doctor or nutritionist for a personalized weight-loss plan.</p>
+        `,
+        icon: 'warning',
+        confirmButtonText: 'Got it',
+        position: 'center',
+        width: '450px',
+        heightAuto: false,
+        showClass: {
+            popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+            popup: 'animate__animated animate__fadeOutUp'
+        }
+    });
+}, 3500);
+
    } else {
        document.getElementById('BMIResult').textContent = 'Obese 🚨';
    }
