@@ -5,8 +5,22 @@ function calculateBMI() {
 
 
    if (!weight || !height) {
-       alert('Please enter valid values!');
-       return;
+    Swal.fire({
+        title: 'Error',
+        html: `Please enter valid values`,
+        icon: 'error',
+        confirmButtonText: 'Ok',
+        timer: 3000,
+        position: 'center',
+        heightAuto: false,
+        showClass: {
+            popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+            popup: 'animate__animated animate__fadeOutUp'
+        }
+    });
+    return;
    }
 
    const bmi = (weight / (height * height)).toFixed(2);
